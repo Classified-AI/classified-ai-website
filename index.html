@@ -90,7 +90,886 @@
     <div id="contact-modal" onclick="this.classList.add('hidden'); this.classList.remove('flex')" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center p-6 z-50">
         <div onclick="event.stopImmediatePropagation()" class="bg-zinc-900 border border-zinc-700 w-full max-w-lg rounded-3xl p-8">
             <h3 class="text-2xl font-bold mb-6">CLASSIFIED BRIEFING REQUEST</h3>
-            <form onsubmit="event.preventDefault(); alert('Thank you. Our team will contact you within 24 hours.'); document.getElementById('contact-modal').classList.add('hidden'); document.getElementById('contact-modal').classList.remove('flex');">
+            <form onsubmit="event.preventDefault(); alert('Th<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSIFIED AI LLC • Elite Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --accent-red: #b91c1c;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .stamp {
+            position: relative;
+            display: inline-block;
+            border: 3px solid #b91c1c;
+            padding: 4px 16px;
+            transform: rotate(-8deg);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            box-shadow: 0 0 0 4px rgba(185, 28, 28, 0.1);
+        }
+
+        .stamp-red {
+            background: #b91c1c;
+            color: white;
+            border-color: #7f1d1d;
+            box-shadow: 2px 2px 0 #450a0a;
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #b91c1c, transparent);
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #b91c1c;
+            transform: translateY(-1px);
+        }
+
+        .service-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                       box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            border: 1px solid #27272a;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border-color: #3f3f46;
+        }
+
+        .process-step {
+            transition: all 0.3s ease;
+        }
+
+        .classified-badge {
+            font-size: 10px;
+            letter-spacing: 2px;
+            padding: 1px 8px;
+            border: 1px solid #b91c1c;
+            color: #b91c1c;
+            font-weight: 700;
+        }
+
+        .grunge-border {
+            position: relative;
+        }
+        
+        .grunge-border:before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                rgba(185, 28, 28, 0.06) 4px,
+                rgba(185, 28, 28, 0.06) 8px
+            );
+            pointer-events: none;
+            border-radius: inherit;
+        }
+
+        .elite-text {
+            background: linear-gradient(90deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .mission-stat {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(9, 9, 11, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .logo-stamp {
+            filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.3));
+        }
+
+        .red-accent {
+            color: #b91c1c;
+        }
+
+        .dark-card {
+            background-color: #18181b;
+            border: 1px solid #27272a;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-lg transition-all">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <img src="classified_ai_business_management.png" alt="Classified AI LLC Logo" class="h-11 w-11 object-contain">
+                    <div>
+                        <div class="font-bold text-2xl tracking-tighter heading-font">CLASSIFIED AI</div>
+                        <div class="text-[10px] text-zinc-500 -mt-1 tracking-[3px]">LLC</div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#services" class="nav-link text-zinc-300 hover:text-white">SERVICES</a>
+                    <a href="#process" class="nav-link text-zinc-300 hover:text-white">PROCESS</a>
+                    <a href="#why-us" class="nav-link text-zinc-300 hover:text-white">WHY US</a>
+                    <a href="#missions" class="nav-link text-zinc-300 hover:text-white">MISSIONS</a>
+                </div>
+                
+                <div class="flex items-center gap-x-3">
+                    <button onclick="showContactModal()"
+                            class="hidden md:block px-6 py-2.5 text-sm font-semibold border border-zinc-700 hover:border-zinc-500 rounded-xl transition-colors">
+                        REQUEST BRIEFING
+                    </button>
+                    <button onclick="showContactModal()"
+                            class="px-5 py-2.5 bg-red-600 hover:bg-red-700 transition-colors text-white text-sm font-bold rounded-xl flex items-center gap-x-2">
+                        <span>START MISSION</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-zinc-950 px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#services" class="py-1 text-zinc-300">SERVICES</a>
+                <a href="#process" class="py-1 text-zinc-300">PROCESS</a>
+                <a href="#why-us" class="py-1 text-zinc-300">WHY US</a>
+                <a href="#missions" class="py-1 text-zinc-300">MISSIONS</a>
+                <div class="pt-3 border-t border-zinc-800 flex flex-col gap-y-3">
+                    <button onclick="showContactModal()" 
+                            class="w-full py-3 text-sm font-semibold border border-zinc-700 rounded-xl">REQUEST BRIEFING</button>
+                    <button onclick="showContactModal()" 
+                            class="w-full py-3 bg-red-600 text-white text-sm font-bold rounded-xl">START MISSION</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-zinc-800 bg-zinc-950 relative overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Content -->
+                <div class="md:col-span-7 max-w-2xl">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <div class="stamp stamp-red text-xs px-4 py-1 tracking-[2px]">TOP SECRET CLEARANCE</div>
+                        <div class="text-xs uppercase tracking-[3px] text-zinc-500 font-medium">EST. 20+ YEARS EXPERTISE</div>
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-7xl leading-[1.05] font-bold tracking-tighter heading-font mb-6">
+                        WE BUILD<br>CLASSIFIED<br>ECOSYSTEMS.
+                    </h1>
+                    
+                    <p class="max-w-lg text-xl text-zinc-400 mb-8">
+                        From high-converting web &amp; mobile apps to complete brand communities and 
+                        precision marketing systems. We turn ambitious ideas into profitable, scalable empires.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="showContactModal()"
+                                class="group px-8 py-4 bg-white text-zinc-950 hover:bg-zinc-100 transition-all font-bold text-base rounded-2xl flex items-center justify-center gap-x-3 shadow-xl shadow-red-950/20">
+                            <span>REQUEST YOUR CLASSIFIED BRIEFING</span>
+                            <i class="fa-solid fa-arrow-right group-active:translate-x-1 transition"></i>
+                        </button>
+                        
+                        <button onclick="document.getElementById('missions').scrollIntoView({ behavior: 'smooth' })"
+                                class="px-8 py-4 border border-zinc-700 hover:bg-zinc-900 transition-all font-semibold rounded-2xl flex items-center justify-center gap-x-2 text-base">
+                            <i class="fa-solid fa-play mr-1"></i>
+                            <span>VIEW PAST MISSIONS</span>
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-8 mt-10 text-sm">
+                        <div class="flex items-center -space-x-2">
+                            <div class="w-7 h-7 bg-zinc-800 border border-zinc-700 rounded-full flex items-center justify-center ring-1 ring-zinc-950"><i class="fa-solid fa-check text-[10px] text-emerald-400"></i></div>
+                            <div class="w-7 h-7 bg-zinc-800 border border-zinc-700 rounded-full flex items-center justify-center ring-1 ring-zinc-950"><i class="fa-solid fa-check text-[10px] text-emerald-400"></i></div>
+                            <div class="w-7 h-7 bg-zinc-800 border border-zinc-700 rounded-full flex items-center justify-center ring-1 ring-zinc-950"><i class="fa-solid fa-check text-[10px] text-emerald-400"></i></div>
+                        </div>
+                        <div class="text-xs text-zinc-500">TRUSTED BY FOUNDERS WHO DEMAND RESULTS</div>
+                    </div>
+                </div>
+                
+                <!-- Right: Logo -->
+                <div class="md:col-span-5 flex justify-center md:justify-end">
+                    <div class="relative">
+                        <img src="classified_ai_business_management.png" 
+                             alt="Classified AI - Business Management Elite Solutions" 
+                             class="w-[320px] md:w-[380px] h-auto logo-stamp drop-shadow-2xl">
+                        
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-3 -right-3 bg-zinc-900 border border-zinc-700 px-4 py-1.5 rounded-2xl shadow-xl">
+                            <div class="flex items-center gap-x-2 text-xs">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <span class="font-mono text-emerald-400 text-[10px] tracking-widest">OPERATIONAL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Subtle bottom gradient -->
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent"></div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="border-b border-zinc-800 py-5 bg-zinc-900/50">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 opacity-75 text-xs tracking-widest font-medium">
+                <div class="flex items-center gap-x-2"><i class="fa-brands fa-react text-lg"></i> <span>REACT / NEXT.JS</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-brands fa-apple text-lg"></i> <span>iOS &amp; ANDROID</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-server"></i> <span>SUPABASE / AWS</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-chart-line"></i> <span>META + FUNNELS</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-users"></i> <span>SKOOL + COMMUNITIES</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT / THE BRIEFING -->
+    <section id="about" class="max-w-screen-2xl mx-auto px-8 pt-16 pb-12">
+        <div class="max-w-3xl">
+            <div class="uppercase text-red-600 text-xs tracking-[3px] font-bold mb-3">THE CLASSIFIED BRIEFING</div>
+            <h2 class="text-5xl md:text-6xl leading-none tracking-tighter heading-font mb-6">We don't build apps.<br>We build empires.</h2>
+            <p class="text-xl text-zinc-400">Classified AI LLC exists for founders who refuse average. With over two decades of record-breaking sales and marketing performance, we deliver complete digital ecosystems — beautiful apps, rock-solid infrastructure, powerful communities, and marketing engines that actually convert.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="max-w-screen-2xl mx-auto px-8 pb-20">
+        <div class="flex items-end justify-between mb-10">
+            <div>
+                <div class="classified-badge mb-3 inline-block">CAPABILITIES</div>
+                <h3 class="text-5xl tracking-tighter heading-font">What We Deliver</h3>
+            </div>
+            <div class="hidden md:block text-right text-sm text-zinc-500 max-w-[260px]">
+                Every engagement receives the full weight of our 20+ years of elite execution.
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Service 1 -->
+            <div class="service-card dark-card p-8 rounded-3xl group">
+                <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center mb-6 border border-zinc-700 group-hover:border-red-900 transition-colors">
+                    <i class="fa-solid fa-mobile-screen-button text-3xl text-red-500"></i>
+                </div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Web &amp; Mobile Apps</h4>
+                <p class="text-zinc-400 mb-5">Premium iOS, Android, and web applications engineered for performance and conversion. Native feel, beautiful interfaces, flawless UX.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">React Native</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Next.js</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Swift / Kotlin</span>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card dark-card p-8 rounded-3xl group">
+                <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center mb-6 border border-zinc-700 group-hover:border-red-900 transition-colors">
+                    <i class="fa-solid fa-server text-3xl text-red-500"></i>
+                </div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Complete Infrastructure</h4>
+                <p class="text-zinc-400 mb-5">Authentication, payments (Stripe), databases, hosting, CI/CD pipelines, analytics, and admin dashboards. Everything battle-tested and scalable.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Supabase</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Vercel / AWS</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Stripe</span>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card dark-card p-8 rounded-3xl group">
+                <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center mb-6 border border-zinc-700 group-hover:border-red-900 transition-colors">
+                    <i class="fa-solid fa-users text-3xl text-red-500"></i>
+                </div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Brand &amp; Community</h4>
+                <p class="text-zinc-400 mb-5">We build engaged tribes, not just followers. Membership platforms, Skool communities, Discord servers, and loyalty systems that turn customers into advocates.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Skool</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Discord</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Memberful</span>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-card dark-card p-8 rounded-3xl group">
+                <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center mb-6 border border-zinc-700 group-hover:border-red-900 transition-colors">
+                    <i class="fa-solid fa-bullseye text-3xl text-red-500"></i>
+                </div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Precision Marketing</h4>
+                <p class="text-zinc-400 mb-5">Targeted campaigns that actually work. Meta Ads, funnel architecture, email/SMS sequences, and conversion rate optimization rooted in real sales psychology.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Meta Ads</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">GoHighLevel</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">ClickUp</span>
+                </div>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-card dark-card p-8 rounded-3xl group">
+                <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center mb-6 border border-zinc-700 group-hover:border-red-900 transition-colors">
+                    <i class="fa-solid fa-chart-line text-3xl text-red-500"></i>
+                </div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Monetization Systems</h4>
+                <p class="text-zinc-400 mb-5">We engineer revenue. Subscription models, tiered pricing, upsells, retention loops, and LTV optimization. Your app doesn't just exist — it prints money.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Subscriptions</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">Freemium</span>
+                    <span class="text-xs bg-zinc-900 px-3 py-1 rounded-full border border-zinc-700">LTV Optimization</span>
+                </div>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-card dark-card p-8 rounded-3xl group">
+                <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center mb-6 border border-zinc-700 group-hover:border-red-900 transition-colors">
+                    <i class="fa-solid fa-shield-halved text-3xl text-red-500"></i>
+                </div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Full Lifecycle Partnership</h4>
+                <p class="text-zinc-400 mb-5">We stay in the trenches with you. Ongoing support, iteration, A/B testing, community management, and scaling strategy. No launch-and-abandon.</p>
+                <div class="pt-4">
+                    <span class="stamp text-xs px-3 py-px text-red-600 border-red-900">ELITE PARTNERSHIP</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- THE PROCESS -->
+    <section id="process" class="bg-zinc-900 border-y border-zinc-800 py-16">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="max-w-2xl mb-12">
+                <div class="classified-badge mb-3">CLASSIFIED PROTOCOL</div>
+                <h3 class="text-5xl tracking-tighter heading-font">The Mission Process</h3>
+                <p class="mt-4 text-lg text-zinc-400">Every project follows our proven 5-phase intelligence protocol. Precision. Discretion. Results.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-5">
+                <!-- Step 1 -->
+                <div class="process-step bg-zinc-950 border border-zinc-800 rounded-3xl p-7 relative">
+                    <div class="absolute -top-3 -left-3 w-9 h-9 bg-red-600 text-white flex items-center justify-center rounded-2xl text-sm font-mono font-bold shadow-inner">01</div>
+                    <div class="mt-6">
+                        <div class="uppercase text-xs tracking-[2px] text-red-500 mb-2 font-bold">PHASE ONE</div>
+                        <h5 class="font-semibold text-xl tracking-tight mb-3">INTAKE &amp; INTELLIGENCE</h5>
+                        <p class="text-sm text-zinc-400">Deep discovery briefing. We extract your vision, market position, competitive landscape, and growth goals.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step bg-zinc-950 border border-zinc-800 rounded-3xl p-7 relative">
+                    <div class="absolute -top-3 -left-3 w-9 h-9 bg-red-600 text-white flex items-center justify-center rounded-2xl text-sm font-mono font-bold shadow-inner">02</div>
+                    <div class="mt-6">
+                        <div class="uppercase text-xs tracking-[2px] text-red-500 mb-2 font-bold">PHASE TWO</div>
+                        <h5 class="font-semibold text-xl tracking-tight mb-3">STRATEGY CLEARANCE</h5>
+                        <p class="text-sm text-zinc-400">Custom blueprint: tech stack, branding architecture, monetization model, and go-to-market sequence.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step bg-zinc-950 border border-zinc-800 rounded-3xl p-7 relative">
+                    <div class="absolute -top-3 -left-3 w-9 h-9 bg-red-600 text-white flex items-center justify-center rounded-2xl text-sm font-mono font-bold shadow-inner">03</div>
+                    <div class="mt-6">
+                        <div class="uppercase text-xs tracking-[2px] text-red-500 mb-2 font-bold">PHASE THREE</div>
+                        <h5 class="font-semibold text-xl tracking-tight mb-3">BUILD &amp; FORTIFY</h5>
+                        <p class="text-sm text-zinc-400">Agile development of apps, backend, payments, and community infrastructure. Weekly classified briefings.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step bg-zinc-950 border border-zinc-800 rounded-3xl p-7 relative">
+                    <div class="absolute -top-3 -left-3 w-9 h-9 bg-red-600 text-white flex items-center justify-center rounded-2xl text-sm font-mono font-bold shadow-inner">04</div>
+                    <div class="mt-6">
+                        <div class="uppercase text-xs tracking-[2px] text-red-500 mb-2 font-bold">PHASE FOUR</div>
+                        <h5 class="font-semibold text-xl tracking-tight mb-3">LAUNCH PROTOCOL</h5>
+                        <p class="text-sm text-zinc-400">Coordinated rollout. Marketing campaigns, community activation, PR, and initial traction systems activated.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="process-step bg-zinc-950 border border-zinc-800 rounded-3xl p-7 relative">
+                    <div class="absolute -top-3 -left-3 w-9 h-9 bg-red-600 text-white flex items-center justify-center rounded-2xl text-sm font-mono font-bold shadow-inner">05</div>
+                    <div class="mt-6">
+                        <div class="uppercase text-xs tracking-[2px] text-red-500 mb-2 font-bold">PHASE FIVE</div>
+                        <h5 class="font-semibold text-xl tracking-tight mb-3">OPERATE &amp; SCALE</h5>
+                        <p class="text-sm text-zinc-400">Ongoing optimization, A/B testing, community management, feature iteration, and revenue scaling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US / 20+ YEARS -->
+    <section id="why-us" class="max-w-screen-2xl mx-auto px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-x-16 gap-y-12 items-center">
+            
+            <div>
+                <div class="stamp mb-6 text-sm px-5 py-1 inline-block">20+ YEARS RECORD-BREAKING PERFORMANCE</div>
+                <h3 class="text-6xl leading-none tracking-tighter heading-font mb-6">Why founders choose<br> Classified AI.</h3>
+                
+                <div class="space-y-6 text-lg">
+                    <div class="flex gap-5">
+                        <div class="mt-1 text-red-500"><i class="fa-solid fa-check-circle fa-lg"></i></div>
+                        <div><span class="font-semibold">End-to-end ownership.</span> We don't pass you between designers, developers, and marketers. One team. One mission.</div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="mt-1 text-red-500"><i class="fa-solid fa-check-circle fa-lg"></i></div>
+                        <div><span class="font-semibold">Sales psychology baked in.</span> Every screen, email, and funnel is engineered using proven conversion principles.</div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="mt-1 text-red-500"><i class="fa-solid fa-check-circle fa-lg"></i></div>
+                        <div><span class="font-semibold">Modern tech + timeless strategy.</span> We use the best current tools while applying battle-tested marketing fundamentals.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-9">
+                <div class="uppercase text-xs tracking-[2.5px] text-red-500 mb-4 font-bold">THE CLASSIFIED DIFFERENCE</div>
+                
+                <div class="space-y-7">
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1.5">
+                            <div class="font-semibold">Apps Launched</div>
+                            <div class="font-mono text-3xl font-bold text-red-500 mission-stat">47</div>
+                        </div>
+                        <div class="h-1.5 bg-zinc-800 rounded-full overflow-hidden"><div class="h-1.5 w-[92%] bg-gradient-to-r from-red-600 to-red-500 rounded-full"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1.5">
+                            <div class="font-semibold">Average Client Revenue Increase</div>
+                            <div class="font-mono text-3xl font-bold text-red-500 mission-stat">3.8x</div>
+                        </div>
+                        <div class="h-1.5 bg-zinc-800 rounded-full overflow-hidden"><div class="h-1.5 w-[85%] bg-gradient-to-r from-red-600 to-red-500 rounded-full"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1.5">
+                            <div class="font-semibold">Community Members Built</div>
+                            <div class="font-mono text-3xl font-bold text-red-500 mission-stat">128k+</div>
+                        </div>
+                        <div class="h-1.5 bg-zinc-800 rounded-full overflow-hidden"><div class="h-1.5 w-[78%] bg-gradient-to-r from-red-600 to-red-500 rounded-full"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSIONS / CASE STUDIES -->
+    <section id="missions" class="max-w-screen-2xl mx-auto px-8 pb-20">
+        <div class="flex items-end justify-between mb-9">
+            <div>
+                <div class="classified-badge mb-2">FIELD REPORTS</div>
+                <h3 class="text-5xl tracking-tighter heading-font">Recent Missions</h3>
+            </div>
+            <a href="#" class="hidden md:flex items-center text-sm font-medium text-red-500 hover:text-red-400 group">VIEW ALL MISSIONS <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i></a>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Mission 1: American V-Twin -->
+            <div class="dark-card border border-zinc-800 rounded-3xl overflow-hidden group">
+                <div class="h-2 bg-gradient-to-r from-red-700 to-red-500"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-red-500 font-bold">LIVE ON APP STORE &amp; GOOGLE PLAY</span>
+                            <h4 class="text-2xl font-semibold tracking-tight mt-1">American V-Twin Diagnostics</h4>
+                        </div>
+                        <div class="stamp text-xs px-3 py-1 text-red-600 border-red-900">SUCCESS</div>
+                    </div>
+                    
+                    <p class="text-zinc-400 mb-6">Full-stack iOS &amp; Android application for Harley-Davidson V-Twin owners. Includes diagnostics, service records, parts lookup, and community features. Complete marketing ecosystem deployed.</p>
+                    
+                    <div class="flex items-center gap-x-6 text-sm">
+                        <div>
+                            <div class="text-emerald-400 text-xs tracking-widest">RESULT</div>
+                            <div class="font-semibold">App live + monetized</div>
+                        </div>
+                        <div>
+                            <div class="text-emerald-400 text-xs tracking-widest">STACK</div>
+                            <div class="font-semibold">React Native + Supabase</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 px-8 py-4 border-t border-zinc-800 text-xs flex items-center justify-between text-zinc-500">
+                    <div>CLASSIFIED CLEARANCE: <span class="font-mono text-red-500">ALPHA-7</span></div>
+                    <div class="font-medium text-emerald-400">OPERATIONAL</div>
+                </div>
+            </div>
+            
+            <!-- Mission 2 -->
+            <div class="dark-card border border-zinc-800 rounded-3xl overflow-hidden group">
+                <div class="h-2 bg-gradient-to-r from-red-700 to-red-500"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-red-500 font-bold">SKOOL COMMUNITY + FUNNELS</span>
+                            <h4 class="text-2xl font-semibold tracking-tight mt-1">Elite Business Accelerator</h4>
+                        </div>
+                        <div class="stamp text-xs px-3 py-1 text-red-600 border-red-900">SUCCESS</div>
+                    </div>
+                    
+                    <p class="text-zinc-400 mb-6">Complete digital ecosystem for a high-ticket coaching program: custom membership platform, onboarding funnels, automated email/SMS sequences, and high-converting Meta ad campaigns.</p>
+                    
+                    <div class="flex items-center gap-x-6 text-sm">
+                        <div>
+                            <div class="text-emerald-400 text-xs tracking-widest">RESULT</div>
+                            <div class="font-semibold">340% increase in enrollments</div>
+                        </div>
+                        <div>
+                            <div class="text-emerald-400 text-xs tracking-widest">STACK</div>
+                            <div class="font-semibold">GoHighLevel + Skool</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 px-8 py-4 border-t border-zinc-800 text-xs flex items-center justify-between text-zinc-500">
+                    <div>CLASSIFIED CLEARANCE: <span class="font-mono text-red-500">BRAVO-12</span></div>
+                    <div class="font-medium text-emerald-400">OPERATIONAL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="border-t border-zinc-800 bg-zinc-900 py-16">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1 rounded-full bg-zinc-950 border border-zinc-800 mb-6">
+                    <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                    <span class="uppercase text-xs tracking-[2px] font-bold text-red-500">CLASSIFIED BRIEFINGS AVAILABLE</span>
+                </div>
+                
+                <h3 class="text-5xl md:text-6xl tracking-tighter heading-font mb-4">Ready to bring your idea<br>into the classified realm?</h3>
+                <p class="text-xl text-zinc-400 mb-9 max-w-md mx-auto">Book a private strategy briefing with our team. We'll assess your vision and outline the exact path to execution and profitability.</p>
+                
+                <button onclick="showContactModal()"
+                        class="group mx-auto px-10 py-5 bg-white hover:bg-zinc-100 active:bg-zinc-200 transition-all text-zinc-950 font-extrabold text-lg rounded-3xl inline-flex items-center gap-x-3 shadow-2xl shadow-red-950/30">
+                    <span>REQUEST YOUR PRIVATE BRIEFING</span>
+                    <i class="fa-solid fa-lock group-active:scale-90 transition"></i>
+                </button>
+                
+                <div class="mt-5 text-xs text-zinc-500 tracking-widest">RESPONSE WITHIN 24 HOURS • CONFIDENTIAL BY DEFAULT</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-800 py-12">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-8 text-sm">
+                <div class="flex items-center gap-x-4">
+                    <img src="classified_ai_business_management.png" alt="Classified AI Logo" class="h-8 w-8 opacity-75">
+                    <div>
+                        <div class="font-bold tracking-tighter">CLASSIFIED AI LLC</div>
+                        <div class="text-[10px] text-zinc-600">ELITE BUSINESS SOLUTIONS</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-x-8 gap-y-2 text-zinc-400">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">NDA Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                    <a href="#" class="hover:text-white transition-colors">Contact</a>
+                </div>
+                
+                <div class="text-xs text-zinc-600">
+                    © 2026 CLASSIFIED AI LLC • ALL RIGHTS CLASSIFIED
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONTACT MODAL -->
+    <div id="contact-modal" onclick="if (event.target.id === 'contact-modal') hideContactModal()" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="bg-zinc-900 border border-zinc-700 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl">
+            
+            <!-- Modal Header -->
+            <div class="px-8 pt-8 pb-5 border-b border-zinc-800 flex items-center justify-between">
+                <div>
+                    <div class="flex items-center gap-x-3">
+                        <i class="fa-solid fa-shield-halved text-red-500 text-2xl"></i>
+                        <div>
+                            <div class="font-bold tracking-tight text-xl">CLASSIFIED BRIEFING REQUEST</div>
+                            <div class="text-xs text-red-500 tracking-[1.5px] font-bold">TOP SECRET • CONFIDENTIAL</div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="hideContactModal()" class="text-zinc-400 hover:text-white w-9 h-9 flex items-center justify-center">
+                    <i class="fa-solid fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <form id="contact-form" onsubmit="submitForm(event)" class="p-8 space-y-5">
+                <div class="grid grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-zinc-500 mb-1.5 font-medium">FULL NAME</label>
+                        <input type="text" id="name" required class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-600 rounded-2xl px-5 py-3 text-sm outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-zinc-500 mb-1.5 font-medium">COMPANY / PROJECT</label>
+                        <input type="text" id="company" class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-600 rounded-2xl px-5 py-3 text-sm outline-none transition-colors">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-zinc-500 mb-1.5 font-medium">EMAIL ADDRESS</label>
+                    <input type="email" id="email" required class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-600 rounded-2xl px-5 py-3 text-sm outline-none transition-colors">
+                </div>
+                
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-zinc-500 mb-1.5 font-medium">WHAT ARE YOU BUILDING?</label>
+                    <textarea id="message" rows="4" required placeholder="Brief description of your app or project idea..." 
+                              class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-600 rounded-3xl px-5 py-4 text-sm outline-none resize-y min-h-[100px] transition-colors"></textarea>
+                </div>
+                
+                <div class="pt-3">
+                    <button type="submit" 
+                            class="w-full py-4 bg-red-600 hover:bg-red-700 active:bg-red-800 transition-colors text-white font-extrabold tracking-wider text-sm rounded-2xl flex items-center justify-center gap-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>SUBMIT CLASSIFIED REQUEST</span>
+                    </button>
+                    <p class="text-center text-[10px] text-zinc-500 mt-4 tracking-widest">OUR AGENTS WILL RESPOND WITHIN 24 HOURS</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 bg-emerald-900 border border-emerald-700 text-emerald-200 px-8 py-4 rounded-2xl shadow-2xl flex items-center gap-x-3 z-[110]">
+        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+        <div>
+            <div class="font-semibold">Request received.</div>
+            <div class="text-xs opacity-80">Our team will contact you shortly.</div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent-red', '#b91c1c');
+        }
+        
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 80) {
+                    navbar.classList.add('nav-scrolled', 'shadow-xl');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-xl');
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    const icon = mobileBtn.querySelector('i');
+                    if (icon.classList.contains('fa-bars')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                
+                // Close mobile menu when clicking a link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            }
+        }
+        
+        // Modal functions
+        let modalOpen = false;
+        
+        function showContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            modalOpen = true;
+            
+            // Focus first input
+            setTimeout(() => {
+                document.getElementById('name').focus();
+            }, 300);
+        }
+        
+        function hideContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            modalOpen = false;
+        }
+        
+        // Form submission
+        function submitForm(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const modal = document.getElementById('contact-modal');
+            const toast = document.getElementById('success-toast');
+            
+            // Hide modal
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            
+            // Show success toast
+            toast.style.display = 'flex';
+            toast.classList.remove('hidden');
+            
+            // Reset form
+            form.reset();
+            
+            // Hide toast after 5 seconds
+            setTimeout(() => {
+                toast.style.transition = 'all 0.4s ease';
+                toast.style.opacity = '0';
+                
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                    toast.style.opacity = '1';
+                    toast.style.transition = '';
+                }, 300);
+            }, 4800);
+            
+            // In a real scenario, you would send this to your backend or email service
+            console.log('%c[CLASSIFIED AI] Form submitted successfully. In production this would trigger email notification + CRM entry.', 'color:#444');
+        }
+        
+        // Keyboard shortcuts
+        function initKeyboardShortcuts() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape" && modalOpen) {
+                    hideContactModal();
+                }
+                
+                // CMD+K or CTRL+K to open briefing
+                if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+                    e.preventDefault();
+                    const modal = document.getElementById('contact-modal');
+                    if (!modal.classList.contains('hidden')) {
+                        hideContactModal();
+                    } else {
+                        showContactModal();
+                    }
+                }
+            });
+            
+            // Add hint in console
+            console.log('%c[CLASSIFIED AI] Pro tip: Press CMD/CTRL + K to open the briefing request modal.', 'color:#555');
+        }
+        
+        // Smooth scroll for anchor links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Initialize everything
+        function initializeWebsite() {
+            initializeTailwind();
+            initNavbar();
+            initKeyboardShortcuts();
+            initSmoothScroll();
+            
+            // Easter egg: clicking the logo in navbar scrolls to top
+            const logo = document.querySelector('nav img');
+            if (logo) {
+                logo.style.cursor = 'pointer';
+                logo.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            
+            // Random subtle animation on stats (optional flair)
+            const stats = document.querySelectorAll('.mission-stat');
+            stats.forEach(stat => {
+                stat.addEventListener('mouseenter', () => {
+                    stat.style.transitionDuration = '0.1s';
+                    stat.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        stat.style.transform = 'scale(1)';
+                    }, 180);
+                });
+            });
+            
+            // Make sure mobile menu starts hidden
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) mobileMenu.classList.add('hidden');
+            
+            console.log('%c[CLASSIFIED AI LLC] Website initialized. All systems operational.', 'color:#3f3f46');
+        }
+        
+        // Boot the site
+        window.onload = initializeWebsite;
+    </script>
+</body>
+</html>ank you. Our team will contact you within 24 hours.'); document.getElementById('contact-modal').classList.add('hidden'); document.getElementById('contact-modal').classList.remove('flex');">
                 <input type="text" placeholder="Full Name" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-3 mb-4 text-sm" required>
                 <input type="email" placeholder="Email Address" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-3 mb-4 text-sm" required>
                 <textarea placeholder="What are you building?" rows="4" class="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 mb-6 text-sm" required></textarea>
