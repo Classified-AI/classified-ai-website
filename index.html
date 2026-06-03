@@ -7,98 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.025em; }
-    </style>
-</head>
-<body class="bg-zinc-950 text-zinc-200">
-    
-    <!-- HERO -->
-    <div class="min-h-screen flex items-center justify-center p-8 text-center border-b border-zinc-800">
-        <div>
-            <img src="logo-optimized.png" alt="Classified AI LLC" class="mx-auto mb-10 w-72 md:w-96">
-            <h1 class="text-6xl md:text-7xl font-bold tracking-tighter heading-font mb-6">CLASSIFIED AI LLC</h1>
-            <p class="text-red-500 text-3xl tracking-widest mb-8">ELITE BUSINESS SOLUTIONS</p>
-            <p class="text-2xl text-zinc-400 max-w-2xl mx-auto">We build complete web & mobile apps, infrastructure, brand communities, and precision marketing systems with 20+ years of record-breaking sales & marketing experience.</p>
-            
-            <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="document.getElementById('contact-modal').classList.remove('hidden'); document.getElementById('contact-modal').classList.add('flex')" 
-                        class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-2xl text-white font-bold text-lg">
-                    REQUEST CLASSIFIED BRIEFING
-                </button>
-                <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" 
-                        class="border border-zinc-700 hover:bg-zinc-900 px-10 py-4 rounded-2xl font-medium text-lg">
-                    VIEW OUR SERVICES
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- SERVICES -->
-    <div id="services" class="max-w-screen-2xl mx-auto px-8 py-20">
-        <div class="text-center mb-12">
-            <div class="text-red-500 text-sm tracking-[3px] font-bold mb-3">CAPABILITIES</div>
-            <h2 class="text-5xl tracking-tighter heading-font">What We Deliver</h2>
-        </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
-                <i class="fa-solid fa-mobile-screen-button text-red-500 text-4xl mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Web & Mobile Apps</h3>
-                <p class="text-zinc-400">Premium iOS, Android, and web applications engineered for performance and conversion.</p>
-            </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
-                <i class="fa-solid fa-server text-red-500 text-4xl mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Complete Infrastructure</h3>
-                <p class="text-zinc-400">Authentication, payments, databases, hosting, CI/CD, and scalable backend systems.</p>
-            </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
-                <i class="fa-solid fa-users text-red-500 text-4xl mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Brand & Community</h3>
-                <p class="text-zinc-400">Skool communities, Discord servers, membership platforms, and engaged tribes.</p>
-            </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
-                <i class="fa-solid fa-bullseye text-red-500 text-4xl mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Precision Marketing</h3>
-                <p class="text-zinc-400">Meta Ads, GoHighLevel funnels, email/SMS automation, and conversion optimization.</p>
-            </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
-                <i class="fa-solid fa-chart-line text-red-500 text-4xl mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Monetization Systems</h3>
-                <p class="text-zinc-400">Subscriptions, pricing strategy, retention loops, and revenue optimization.</p>
-            </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
-                <i class="fa-solid fa-handshake text-red-500 text-4xl mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Full Lifecycle Partnership</h3>
-                <p class="text-zinc-400">We stay with you after launch — iteration, support, scaling, and optimization.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- FINAL CTA -->
-    <div class="bg-zinc-900 border-t border-zinc-800 py-16 text-center">
-        <h2 class="text-4xl tracking-tighter heading-font mb-4">Ready to bring your idea into the classified realm?</h2>
-        <p class="text-xl text-zinc-400 mb-8">Book a private strategy briefing with our team.</p>
-        <button onclick="document.getElementById('contact-modal').classList.remove('hidden'); document.getElementById('contact-modal').classList.add('flex')" 
-                class="bg-white text-zinc-950 hover:bg-zinc-100 px-10 py-4 rounded-2xl font-extrabold text-lg">
-            REQUEST YOUR PRIVATE BRIEFING
-        </button>
-    </div>
-
-    <!-- CONTACT MODAL -->
-    <div id="contact-modal" onclick="this.classList.add('hidden'); this.classList.remove('flex')" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center p-6 z-50">
-        <div onclick="event.stopImmediatePropagation()" class="bg-zinc-900 border border-zinc-700 w-full max-w-lg rounded-3xl p-8">
-            <h3 class="text-2xl font-bold mb-6">CLASSIFIED BRIEFING REQUEST</h3>
-            <form onsubmit="event.preventDefault(); alert('Th<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLASSIFIED AI LLC • Elite Business Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
         :root {
@@ -968,15 +876,5 @@
         // Boot the site
         window.onload = initializeWebsite;
     </script>
-</body>
-</html>ank you. Our team will contact you within 24 hours.'); document.getElementById('contact-modal').classList.add('hidden'); document.getElementById('contact-modal').classList.remove('flex');">
-                <input type="text" placeholder="Full Name" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-3 mb-4 text-sm" required>
-                <input type="email" placeholder="Email Address" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-3 mb-4 text-sm" required>
-                <textarea placeholder="What are you building?" rows="4" class="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 mb-6 text-sm" required></textarea>
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-4 rounded-2xl font-bold">SUBMIT CLASSIFIED REQUEST</button>
-            </form>
-        </div>
-    </div>
-
 </body>
 </html>
