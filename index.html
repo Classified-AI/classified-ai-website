@@ -10,7 +10,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Special+Elite&family=Oswald:wght@600;700&display=swap');
 
 :root{
   --red:#dc2626; --red-deep:#7f1d1d;
@@ -82,7 +82,21 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 /* paper dossier hero */
 .tw{font-family:'Special Elite','Courier New',monospace;-webkit-text-stroke:.6px currentColor}
 #tw-caret{animation:blink 1s steps(1) infinite;color:#b91c1c}
-#big-stamp{opacity:0;transform:scale(2.6) rotate(-24deg);mix-blend-mode:multiply;filter:url(#stamp-rough);box-shadow:inset 0 0 0 3px rgba(185,28,28,.55),inset 0 0 26px rgba(185,28,28,.22);background:radial-gradient(ellipse at 32% 38%,rgba(185,28,28,.10),transparent 55%),radial-gradient(ellipse at 70% 65%,rgba(185,28,28,.07),transparent 50%)}
+:root{--paper:#c9cacf}
+#big-stamp{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.03em;opacity:0;transform:scale(2.6) rotate(-24deg);mix-blend-mode:multiply;filter:url(#stamp-rough);box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 10px #b91c1c}
+@media(min-width:768px){#big-stamp{box-shadow:inset 0 0 0 9px var(--paper),inset 0 0 0 14px #b91c1c}}
+#big-stamp .spk{position:absolute;inset:-12px;pointer-events:none;background-image:
+ radial-gradient(circle 5px at 8% 22%,var(--paper) 97%,transparent),
+ radial-gradient(circle 3px at 22% 78%,var(--paper) 97%,transparent),
+ radial-gradient(circle 4px at 37% 12%,var(--paper) 97%,transparent),
+ radial-gradient(circle 3px at 52% 88%,var(--paper) 97%,transparent),
+ radial-gradient(circle 5px at 64% 8%,var(--paper) 97%,transparent),
+ radial-gradient(circle 3px at 71% 68%,var(--paper) 97%,transparent),
+ radial-gradient(circle 4px at 83% 28%,var(--paper) 97%,transparent),
+ radial-gradient(circle 5px at 93% 74%,var(--paper) 97%,transparent),
+ radial-gradient(circle 2px at 45% 45%,var(--paper) 97%,transparent),
+ radial-gradient(circle 2px at 15% 55%,var(--paper) 97%,transparent),
+ radial-gradient(circle 2px at 88% 50%,var(--paper) 97%,transparent)}
 #paper.stamped #big-stamp{animation:bigStamp .45s cubic-bezier(.2,1.4,.42,1) forwards}
 @keyframes bigStamp{0%{opacity:0;transform:scale(2.6) rotate(-24deg)}60%{opacity:1;transform:scale(.94) rotate(-7deg)}100%{opacity:.96;transform:scale(1) rotate(-9deg)}}
 #paper.stamped #tw-wrap{animation:thud .28s .1s ease-out}
@@ -130,8 +144,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 <!-- HERO -->
 <header class="relative overflow-hidden">
   <!-- PAPER DOSSIER BAND -->
-  <div id="paper" class="relative bg-[#f5f3ec] text-zinc-900 overflow-hidden border-b-[6px] border-red-800" title="Click to replay">
-    <div class="absolute inset-0 pointer-events-none opacity-[.06]" style="background-image:repeating-linear-gradient(0deg,transparent 0 27px,#8a8578 27px 28px)"></div>
+  <div id="paper" class="relative bg-[#c9cacf] text-zinc-900 overflow-hidden border-b-[6px] border-red-800" title="Click to replay">
+    <div class="absolute inset-0 pointer-events-none opacity-[.06]" style="background-image:repeating-linear-gradient(0deg,transparent 0 27px,#909198 27px 28px)"></div>
     <div class="relative flex items-center justify-between px-6 md:px-14 pt-5 mono text-[10px] tracking-[3px] text-zinc-500">
       <span>DOSSIER № CA-2026-001</span>
       <span class="hidden md:inline text-red-800/70">CLASSIFIED AI LLC — EYES ONLY</span>
@@ -141,19 +155,23 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
       <div class="relative inline-block" id="tw-wrap">
         <div class="tw font-bold text-4xl md:text-6xl lg:text-7xl leading-snug" id="typewriter"><span id="typed"></span><span id="tw-caret">▌</span></div>
         <div class="absolute left-1/2 top-1/2 pointer-events-none" style="transform:translate(-50%,-50%)">
-          <div id="big-stamp" class="px-8 md:px-14 py-3 md:py-5 border-[5px] md:border-[7px] border-red-700 text-red-700 font-black tracking-[8px] md:tracking-[14px] text-4xl md:text-7xl whitespace-nowrap rounded-2xl md:rounded-3xl">CLASSIFIED</div>
+          <div id="big-stamp" class="relative px-10 md:px-16 py-2 md:py-4 border-[7px] md:border-[11px] border-red-700 text-red-700 text-6xl md:text-9xl whitespace-nowrap rounded-md">CLASSIFIED<span class="spk"></span></div>
         </div>
       </div>
     </div>
     <div id="scope" class="pointer-events-none absolute top-0 left-0 opacity-0" style="width:140px;height:140px">
-      <svg viewBox="0 0 140 140" fill="none" stroke="#18181b" stroke-width="1.2">
-        <circle cx="70" cy="70" r="58" opacity=".8" stroke-width="1.6"/>
-        <circle cx="70" cy="70" r="41" opacity=".45" stroke-width=".8"/>
-        <line x1="70" y1="2" x2="70" y2="50"/><line x1="70" y1="90" x2="70" y2="138"/>
-        <line x1="2" y1="70" x2="50" y2="70"/><line x1="90" y1="70" x2="138" y2="70"/>
-        <line x1="70" y1="56" x2="70" y2="62" opacity=".6"/><line x1="70" y1="78" x2="70" y2="84" opacity=".6"/>
-        <line x1="56" y1="70" x2="62" y2="70" opacity=".6"/><line x1="78" y1="70" x2="84" y2="70" opacity=".6"/>
-        <circle cx="70" cy="70" r="2.2" fill="#b91c1c" stroke="none"/>
+      <svg viewBox="0 0 140 140" fill="none" stroke="#dc2626" opacity=".88">
+        <circle cx="70" cy="70" r="55" stroke-width="5"/>
+        <circle cx="70" cy="70" r="42" stroke-width="2"/>
+        <line x1="70" y1="2" x2="70" y2="30" stroke-width="7"/>
+        <line x1="70" y1="30" x2="70" y2="56" stroke-width="3"/>
+        <line x1="70" y1="84" x2="70" y2="110" stroke-width="3"/>
+        <line x1="70" y1="110" x2="70" y2="138" stroke-width="7"/>
+        <line x1="2" y1="70" x2="30" y2="70" stroke-width="7"/>
+        <line x1="30" y1="70" x2="56" y2="70" stroke-width="3"/>
+        <line x1="84" y1="70" x2="110" y2="70" stroke-width="3"/>
+        <line x1="110" y1="70" x2="138" y2="70" stroke-width="7"/>
+        <path d="M60,54 h-6 v6 M80,54 h6 v6 M86,80 v6 h-6 M54,86 v-6 h6" stroke-width="3.5"/>
       </svg>
     </div>
   </div>
