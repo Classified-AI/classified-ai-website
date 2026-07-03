@@ -80,9 +80,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 
 ::selection{background:#dc2626;color:#fff}
 /* paper dossier hero */
-.tw{font-family:'Special Elite','Courier New',monospace}
+.tw{font-family:'Special Elite','Courier New',monospace;-webkit-text-stroke:.6px currentColor}
 #tw-caret{animation:blink 1s steps(1) infinite;color:#b91c1c}
-#big-stamp{opacity:0;transform:scale(2.6) rotate(-24deg);mix-blend-mode:multiply;box-shadow:inset 0 0 22px rgba(185,28,28,.18)}
+#big-stamp{opacity:0;transform:scale(2.6) rotate(-24deg);mix-blend-mode:multiply;filter:url(#stamp-rough);box-shadow:inset 0 0 0 3px rgba(185,28,28,.55),inset 0 0 26px rgba(185,28,28,.22);background:radial-gradient(ellipse at 32% 38%,rgba(185,28,28,.10),transparent 55%),radial-gradient(ellipse at 70% 65%,rgba(185,28,28,.07),transparent 50%)}
 #paper.stamped #big-stamp{animation:bigStamp .45s cubic-bezier(.2,1.4,.42,1) forwards}
 @keyframes bigStamp{0%{opacity:0;transform:scale(2.6) rotate(-24deg)}60%{opacity:1;transform:scale(.94) rotate(-7deg)}100%{opacity:.96;transform:scale(1) rotate(-9deg)}}
 #paper.stamped #tw-wrap{animation:thud .28s .1s ease-out}
@@ -94,6 +94,12 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="stamp-rough">
+    <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="7" result="n1"/>
+    <feDisplacementMap in="SourceGraphic" in2="n1" scale="6"/>
+  </filter>
+</svg>
 
 <!-- TOP BAR -->
 <div class="bg-gradient-to-r from-red-950 via-red-900 to-red-950 text-center py-2 px-4 text-xs tracking-[2px] font-semibold text-red-100">
@@ -133,9 +139,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
     </div>
     <div class="relative max-w-screen-lg mx-auto px-6 py-24 md:py-32 text-center">
       <div class="relative inline-block" id="tw-wrap">
-        <div class="tw text-3xl md:text-5xl lg:text-6xl leading-snug" id="typewriter"><span id="typed"></span><span id="tw-caret">▌</span></div>
+        <div class="tw font-bold text-4xl md:text-6xl lg:text-7xl leading-snug" id="typewriter"><span id="typed"></span><span id="tw-caret">▌</span></div>
         <div class="absolute left-1/2 top-1/2 pointer-events-none" style="transform:translate(-50%,-50%)">
-          <div id="big-stamp" class="px-8 md:px-14 py-3 md:py-5 border-[6px] md:border-8 border-red-700 text-red-700 font-black tracking-[8px] md:tracking-[14px] text-4xl md:text-7xl whitespace-nowrap rounded-sm">CLASSIFIED</div>
+          <div id="big-stamp" class="px-8 md:px-14 py-3 md:py-5 border-[5px] md:border-[7px] border-red-700 text-red-700 font-black tracking-[8px] md:tracking-[14px] text-4xl md:text-7xl whitespace-nowrap rounded-2xl md:rounded-3xl">CLASSIFIED</div>
         </div>
       </div>
     </div>
@@ -216,61 +222,12 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
     <div class="rv relative rounded-3xl overflow-hidden glass">
       <div class="absolute top-4 left-5 z-10 mono text-[10px] tracking-[3px] text-zinc-500">FIELD ARCHIVE // 02:00 AM</div>
       <div class="absolute bottom-4 right-5 z-10 mono text-[10px] tracking-[2px] text-red-500 border border-red-900 px-2 py-1 rotate-[-4deg]">EYES ONLY</div>
-      <svg viewBox="0 0 440 340" class="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
-            <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <rect width="440" height="340" fill="#0c0d11"/>
-        <polygon id="cone-poly" points="196,0 284,0 360,340 120,340" fill="url(#cone)"/>
-        <ellipse cx="240" cy="326" rx="120" ry="10" fill="#000" opacity=".5"/>
-
-        <!-- left filing cabinet -->
-        <g fill="#171d29" stroke="#2a3342" stroke-width="1.5">
-          <rect x="34" y="128" width="88" height="196" rx="3"/>
-          <rect x="26" y="140" width="104" height="38" rx="3" fill="#1b2230"/>
-        </g>
-        <g stroke="#2a3342" stroke-width="1.5">
-          <line x1="34" y1="196" x2="122" y2="196"/><line x1="34" y1="242" x2="122" y2="242"/><line x1="34" y1="288" x2="122" y2="288"/>
-        </g>
-        <g fill="#39445a"><rect x="66" y="212" width="24" height="5" rx="2"/><rect x="66" y="258" width="24" height="5" rx="2"/><rect x="66" y="302" width="24" height="5" rx="2"/></g>
-        <g fill="#e7e3d6"><rect x="36" y="132" width="18" height="10" rx="1"/><rect x="60" y="129" width="18" height="13" rx="1"/><rect x="84" y="133" width="18" height="9" rx="1"/><rect x="106" y="130" width="16" height="12" rx="1"/></g>
-
-        <!-- right filing cabinet -->
-        <g fill="#171d29" stroke="#2a3342" stroke-width="1.5">
-          <rect x="318" y="128" width="88" height="196" rx="3"/>
-        </g>
-        <g stroke="#2a3342" stroke-width="1.5">
-          <line x1="318" y1="177" x2="406" y2="177"/><line x1="318" y1="226" x2="406" y2="226"/><line x1="318" y1="275" x2="406" y2="275"/>
-        </g>
-        <g fill="#39445a"><rect x="350" y="148" width="24" height="5" rx="2"/><rect x="350" y="197" width="24" height="5" rx="2"/><rect x="350" y="246" width="24" height="5" rx="2"/><rect x="350" y="295" width="24" height="5" rx="2"/></g>
-        <!-- red top secret folder leaning on right cabinet -->
-        <g transform="rotate(-12 300 300)">
-          <rect x="278" y="288" width="52" height="34" rx="2" fill="#7f1d1d"/>
-          <rect x="278" y="283" width="20" height="8" rx="1" fill="#7f1d1d"/>
-          <rect x="284" y="298" width="40" height="3" fill="#fecaca" opacity=".55"/>
-          <rect x="284" y="306" width="30" height="3" fill="#fecaca" opacity=".35"/>
-        </g>
-
-        <!-- shadow agent -->
-        <g>
-          <path d="M198,340 L206,232 Q207,208 222,202 L258,202 Q273,208 274,232 L282,340 Z" fill="#1c2534"/>
-          <path d="M206,232 L188,300 L200,304 L212,248 Z" fill="#1a2231"/>
-          <path d="M274,232 L292,300 L280,304 L268,248 Z" fill="#1a2231"/>
-          <polygon points="230,202 250,202 240,228" fill="#d9dee6" opacity=".92"/>
-          <polygon points="237,208 243,208 246,236 240,246 234,236" fill="#0d1119"/>
-          <circle cx="240" cy="178" r="17" fill="#182031"/>
-          <path d="M221,172 Q221,148 240,146 Q259,148 259,172 Z" fill="#141c2b"/>
-          <ellipse cx="240" cy="172" rx="33" ry="7" fill="#141c2b"/>
-          <rect x="222" y="163" width="36" height="5" rx="2.5" fill="#0d1119"/>
-        </g>
-        <!-- floating dust motes -->
-        <g fill="#ffffff" opacity=".18">
-          <circle cx="216" cy="90" r="1.3"/><circle cx="252" cy="60" r="1"/><circle cx="238" cy="120" r="1.1"/><circle cx="266" cy="104" r=".9"/><circle cx="224" cy="146" r=".8"/>
-        </g>
-      </svg>
+      <div class="relative bg-[#0c0d11] aspect-[4/3] flex items-center justify-center overflow-hidden">
+        <div id="cone-poly" class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(255,255,255,.10),transparent 72%);clip-path:polygon(42% 0,58% 0,84% 100%,16% 100%)"></div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-64 h-6 bg-black/60 blur-md rounded-full"></div>
+        <img src="logo.png" alt="Classified AI — Business Management Elite Solutions badge"
+             class="relative w-60 md:w-80 h-auto rounded-full bg-zinc-100 p-3 ring-4 ring-zinc-800 rotate-[-6deg] drop-shadow-[0_28px_45px_rgba(0,0,0,.65)]">
+      </div>
     </div>
 
     <div class="rv rv-d1">
