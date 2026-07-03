@@ -79,29 +79,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 #map-card{transition:opacity .25s,transform .25s}
 
 ::selection{background:#dc2626;color:#fff}
-/* paper dossier hero */
-.tw{font-family:'Special Elite','Courier New',monospace}
-#tw-caret{animation:blink 1s steps(1) infinite;color:#b91c1c}
-:root{--paper:#c9cacf}
-#big-stamp{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.03em;opacity:0;transform:scale(2.6) rotate(-24deg);mix-blend-mode:multiply;filter:url(#stamp-rough);box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 10px #b91c1c}
-@media(min-width:768px){#big-stamp{box-shadow:inset 0 0 0 9px var(--paper),inset 0 0 0 14px #b91c1c}}
-#big-stamp .spk{position:absolute;inset:-12px;pointer-events:none;background-image:
- radial-gradient(circle 5px at 8% 22%,var(--paper) 97%,transparent),
- radial-gradient(circle 3px at 22% 78%,var(--paper) 97%,transparent),
- radial-gradient(circle 4px at 37% 12%,var(--paper) 97%,transparent),
- radial-gradient(circle 3px at 52% 88%,var(--paper) 97%,transparent),
- radial-gradient(circle 5px at 64% 8%,var(--paper) 97%,transparent),
- radial-gradient(circle 3px at 71% 68%,var(--paper) 97%,transparent),
- radial-gradient(circle 4px at 83% 28%,var(--paper) 97%,transparent),
- radial-gradient(circle 5px at 93% 74%,var(--paper) 97%,transparent),
- radial-gradient(circle 2px at 45% 45%,var(--paper) 97%,transparent),
- radial-gradient(circle 2px at 15% 55%,var(--paper) 97%,transparent),
- radial-gradient(circle 2px at 88% 50%,var(--paper) 97%,transparent)}
-#paper.stamped #big-stamp{animation:bigStamp .85s cubic-bezier(.25,1.25,.45,1) forwards}
-@keyframes bigStamp{0%{opacity:0;transform:scale(2.6) rotate(-24deg)}60%{opacity:1;transform:scale(.94) rotate(-7deg)}100%{opacity:.96;transform:scale(1) rotate(-9deg)}}
-#paper.stamped #tw-wrap{animation:thud .32s .5s ease-out}
-@keyframes thud{0%,100%{translate:0 0}45%{translate:0 4px}}
-#scope{transition:opacity .35s;will-change:transform;z-index:20}
 #cone-poly{animation:flick 8s infinite}
 @keyframes flick{0%,91%,94%,97%,100%{opacity:1}92%{opacity:.5}95%{opacity:.7}}
 
@@ -143,39 +120,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 
 <!-- HERO -->
 <header class="relative overflow-hidden">
-  <!-- PAPER DOSSIER BAND -->
-  <div id="paper" class="relative bg-[#c9cacf] text-zinc-900 overflow-hidden border-b-[6px] border-red-800" title="Click to replay">
-    <div class="absolute inset-0 pointer-events-none opacity-[.06]" style="background-image:repeating-linear-gradient(0deg,transparent 0 27px,#909198 27px 28px)"></div>
-    <div class="relative flex items-center justify-between px-6 md:px-14 pt-5 mono text-[10px] tracking-[3px] text-zinc-500">
-      <span>DOSSIER № CA-2026-001</span>
-      <span class="hidden md:inline text-red-800/70">CLASSIFIED AI LLC — EYES ONLY</span>
-      <span>PAGE 01 / 01</span>
-    </div>
-    <div class="relative max-w-screen-lg mx-auto px-6 py-24 md:py-32 text-center">
-      <div class="relative inline-block" id="tw-wrap">
-        <div class="tw text-5xl md:text-7xl lg:text-8xl leading-snug" id="typewriter"><span id="typed"></span><span id="tw-caret">▌</span></div>
-        <div class="absolute left-1/2 top-1/2 pointer-events-none" style="transform:translate(-50%,-50%)">
-          <div id="big-stamp" class="relative px-10 md:px-16 py-2 md:py-4 border-[7px] md:border-[11px] border-red-700 text-red-700 text-6xl md:text-9xl whitespace-nowrap rounded-md">CLASSIFIED<span class="spk"></span></div>
-        </div>
-      </div>
-    </div>
-    <div id="scope" class="pointer-events-none absolute top-0 left-0 opacity-0" style="width:96px;height:96px">
-      <svg viewBox="0 0 140 140" fill="none" stroke="#18181b" opacity=".85">
-        <circle cx="70" cy="70" r="55" stroke-width="5"/>
-        <circle cx="70" cy="70" r="42" stroke-width="2"/>
-        <line x1="70" y1="2" x2="70" y2="30" stroke-width="7"/>
-        <line x1="70" y1="30" x2="70" y2="56" stroke-width="3"/>
-        <line x1="70" y1="84" x2="70" y2="110" stroke-width="3"/>
-        <line x1="70" y1="110" x2="70" y2="138" stroke-width="7"/>
-        <line x1="2" y1="70" x2="30" y2="70" stroke-width="7"/>
-        <line x1="30" y1="70" x2="56" y2="70" stroke-width="3"/>
-        <line x1="84" y1="70" x2="110" y2="70" stroke-width="3"/>
-        <line x1="110" y1="70" x2="138" y2="70" stroke-width="7"/>
-        <path d="M60,54 h-6 v6 M80,54 h6 v6 M86,80 v6 h-6 M54,86 v-6 h6" stroke-width="3.5"/>
-      </svg>
-    </div>
-  </div>
-
   <!-- DARK COMMAND BAND -->
   <div class="relative grid-bg scan overflow-hidden">
     <div class="vignette absolute inset-0"></div>
@@ -184,9 +128,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 
     <div class="relative max-w-screen-xl mx-auto px-6 pt-20 pb-24 text-center">
       <h1 class="rv hd text-5xl md:text-7xl lg:text-8xl leading-[0.98] tracking-tighter mb-7">
-        YOUR IDEA.<br>
-        <span class="text-red-600">WEAPONIZED</span><br>
-        INTO A BUSINESS.
+        BUSINESS SOLUTIONS<br>
+        SO GOOD THEY SHOULD BE<br>
+        <span class="text-red-600">CLASSIFIED.</span>
       </h1>
 
       <p class="rv rv-d1 max-w-2xl mx-auto text-lg md:text-xl text-zinc-400 mb-10">
@@ -612,29 +556,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-/* ---------- paper hero: typewriter + stamp + scope ---------- */
-(function(){
-  const paper=document.getElementById('paper'), typed=document.getElementById('typed'), caret=document.getElementById('tw-caret');
-  if(!paper||!typed) return;
-  const TEXT='Business solutions so good they should be...';
-  let timer;
-  function run(){
-    clearTimeout(timer); paper.classList.remove('stamped'); typed.textContent=''; caret.style.display='inline';
-    let i=0;
-    (function step(){
-      if(i<=TEXT.length){ typed.textContent=TEXT.slice(0,i); i++; timer=setTimeout(step,95); }
-      else { timer=setTimeout(()=>{ paper.classList.add('stamped'); caret.style.display='none'; },900); }
-    })();
-  }
-  run();
-  paper.addEventListener('click',run);
-  const scope=document.getElementById('scope');
-  let tx=0,ty=0,x=0,y=0;
-  paper.addEventListener('mousemove',e=>{const r=paper.getBoundingClientRect(); tx=e.clientX-r.left; ty=e.clientY-r.top; scope.style.opacity='1';});
-  paper.addEventListener('mouseleave',()=>{scope.style.opacity='0';});
-  (function loop(){ x+=(tx-x)*.14; y+=(ty-y)*.14; scope.style.transform='translate('+(x-48)+'px,'+(y-48)+'px)'; requestAnimationFrame(loop); })();
-})();
 
 /* ---------- ops map ---------- */
 const PINS=[
