@@ -80,8 +80,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 
 ::selection{background:#dc2626;color:#fff}
 .tw{font-family:'Special Elite','Courier New',monospace}
-#hero-stamp{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.05em;transform:rotate(-4deg);filter:url(#stamp-rough);box-shadow:inset 0 0 0 4px #09090b,inset 0 0 0 7px #b91c1c}
-@media(min-width:768px){#hero-stamp{box-shadow:inset 0 0 0 6px #09090b,inset 0 0 0 10px #b91c1c}}
+#hero-stamp{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.01em;transform:rotate(-11deg) scaleY(1.08);transform-origin:center;filter:url(#stamp-rough);box-shadow:inset 0 0 0 5px #09090b,inset 0 0 0 8px #b91c1c}
+@media(min-width:768px){#hero-stamp{box-shadow:inset 0 0 0 8px #09090b,inset 0 0 0 12px #b91c1c}}
 #hero-stamp .spk2{position:absolute;inset:-10px;pointer-events:none;background-image:
  radial-gradient(circle 5px at 9% 24%,#09090b 97%,transparent),
  radial-gradient(circle 3px at 24% 76%,#09090b 97%,transparent),
@@ -136,14 +136,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
   <!-- DARK COMMAND BAND -->
   <div class="relative grid-bg scan overflow-hidden">
     <div class="vignette absolute inset-0"></div>
-    <div class="orb bg-red-600 w-[420px] h-[420px] -top-40 -left-24"></div>
-    <div class="orb bg-cyan-500 w-[360px] h-[360px] top-40 right-0 opacity-20"></div>
+    <img src="logo.png" alt="" aria-hidden="true" class="absolute -left-16 top-8 w-72 md:w-96 opacity-[.07] rotate-[-14deg] pointer-events-none select-none" style="filter:grayscale(1)">
+    <img src="logo.png" alt="" aria-hidden="true" class="absolute -right-12 top-44 w-64 md:w-80 opacity-[.06] rotate-[11deg] pointer-events-none select-none" style="filter:grayscale(1)">
 
     <div class="relative max-w-screen-xl mx-auto px-6 pt-20 pb-24 text-center">
       <h1 class="rv hd text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tighter mb-7">
         <span class="tw font-normal tracking-normal">BUSINESS SOLUTIONS<br>
         SO GOOD THEY SHOULD BE</span><br>
-        <span id="hero-stamp" class="relative inline-block border-[5px] md:border-[7px] border-red-700 text-red-700 px-5 md:px-9 py-1 md:py-2 rounded-md mt-4">CLASSIFIED<span class="spk2"></span></span>
+        <span id="hero-stamp" class="relative inline-block border-[6px] md:border-[9px] border-red-700 text-red-700 px-5 md:px-10 py-0.5 md:py-1.5 mt-6">CLASSIFIED<span class="spk2"></span></span>
       </h1>
 
       <p class="rv rv-d1 max-w-2xl mx-auto text-lg md:text-xl text-zinc-400 mb-10">
