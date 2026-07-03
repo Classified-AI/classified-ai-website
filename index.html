@@ -80,7 +80,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
 
 ::selection{background:#dc2626;color:#fff}
 /* paper dossier hero */
-.tw{font-family:'Special Elite','Courier New',monospace;-webkit-text-stroke:.6px currentColor}
+.tw{font-family:'Special Elite','Courier New',monospace}
 #tw-caret{animation:blink 1s steps(1) infinite;color:#b91c1c}
 :root{--paper:#c9cacf}
 #big-stamp{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.03em;opacity:0;transform:scale(2.6) rotate(-24deg);mix-blend-mode:multiply;filter:url(#stamp-rough);box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 10px #b91c1c}
@@ -97,9 +97,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
  radial-gradient(circle 2px at 45% 45%,var(--paper) 97%,transparent),
  radial-gradient(circle 2px at 15% 55%,var(--paper) 97%,transparent),
  radial-gradient(circle 2px at 88% 50%,var(--paper) 97%,transparent)}
-#paper.stamped #big-stamp{animation:bigStamp .45s cubic-bezier(.2,1.4,.42,1) forwards}
+#paper.stamped #big-stamp{animation:bigStamp .85s cubic-bezier(.25,1.25,.45,1) forwards}
 @keyframes bigStamp{0%{opacity:0;transform:scale(2.6) rotate(-24deg)}60%{opacity:1;transform:scale(.94) rotate(-7deg)}100%{opacity:.96;transform:scale(1) rotate(-9deg)}}
-#paper.stamped #tw-wrap{animation:thud .28s .1s ease-out}
+#paper.stamped #tw-wrap{animation:thud .32s .5s ease-out}
 @keyframes thud{0%,100%{translate:0 0}45%{translate:0 4px}}
 #scope{transition:opacity .35s;will-change:transform;z-index:20}
 #cone-poly{animation:flick 8s infinite}
@@ -153,14 +153,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:#09090b;color:#e4e4e7;o
     </div>
     <div class="relative max-w-screen-lg mx-auto px-6 py-24 md:py-32 text-center">
       <div class="relative inline-block" id="tw-wrap">
-        <div class="tw font-bold text-4xl md:text-6xl lg:text-7xl leading-snug" id="typewriter"><span id="typed"></span><span id="tw-caret">▌</span></div>
+        <div class="tw text-5xl md:text-7xl lg:text-8xl leading-snug" id="typewriter"><span id="typed"></span><span id="tw-caret">▌</span></div>
         <div class="absolute left-1/2 top-1/2 pointer-events-none" style="transform:translate(-50%,-50%)">
           <div id="big-stamp" class="relative px-10 md:px-16 py-2 md:py-4 border-[7px] md:border-[11px] border-red-700 text-red-700 text-6xl md:text-9xl whitespace-nowrap rounded-md">CLASSIFIED<span class="spk"></span></div>
         </div>
       </div>
     </div>
-    <div id="scope" class="pointer-events-none absolute top-0 left-0 opacity-0" style="width:140px;height:140px">
-      <svg viewBox="0 0 140 140" fill="none" stroke="#dc2626" opacity=".88">
+    <div id="scope" class="pointer-events-none absolute top-0 left-0 opacity-0" style="width:96px;height:96px">
+      <svg viewBox="0 0 140 140" fill="none" stroke="#18181b" opacity=".85">
         <circle cx="70" cy="70" r="55" stroke-width="5"/>
         <circle cx="70" cy="70" r="42" stroke-width="2"/>
         <line x1="70" y1="2" x2="70" y2="30" stroke-width="7"/>
@@ -623,8 +623,8 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
     clearTimeout(timer); paper.classList.remove('stamped'); typed.textContent=''; caret.style.display='inline';
     let i=0;
     (function step(){
-      if(i<=TEXT.length){ typed.textContent=TEXT.slice(0,i); i++; timer=setTimeout(step,52); }
-      else { timer=setTimeout(()=>{ paper.classList.add('stamped'); caret.style.display='none'; },380); }
+      if(i<=TEXT.length){ typed.textContent=TEXT.slice(0,i); i++; timer=setTimeout(step,95); }
+      else { timer=setTimeout(()=>{ paper.classList.add('stamped'); caret.style.display='none'; },900); }
     })();
   }
   run();
@@ -633,7 +633,7 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   let tx=0,ty=0,x=0,y=0;
   paper.addEventListener('mousemove',e=>{const r=paper.getBoundingClientRect(); tx=e.clientX-r.left; ty=e.clientY-r.top; scope.style.opacity='1';});
   paper.addEventListener('mouseleave',()=>{scope.style.opacity='0';});
-  (function loop(){ x+=(tx-x)*.14; y+=(ty-y)*.14; scope.style.transform='translate('+(x-70)+'px,'+(y-70)+'px)'; requestAnimationFrame(loop); })();
+  (function loop(){ x+=(tx-x)*.14; y+=(ty-y)*.14; scope.style.transform='translate('+(x-48)+'px,'+(y-48)+'px)'; requestAnimationFrame(loop); })();
 })();
 
 /* ---------- ops map ---------- */
